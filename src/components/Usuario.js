@@ -22,7 +22,7 @@ export default function Usuario(){
               <strong>{user}</strong>
             
             <span>
-              Catana
+              {user}
               <ion-icon name="pencil" onClick={newUser} ></ion-icon>
             </span>
             </div>
