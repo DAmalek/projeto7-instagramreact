@@ -16,6 +16,7 @@ import animals from "./assets/img/adorable_animals.svg";
       { user: barked, content: dog, liked: animals, num:200541 }
     ]
     
+    
     return (
       <div className ="posts">
             {data.map((value, index)=> <Post user={value.user} content={value.content}liked={value.liked} num={value.num} key={index}  />)}
@@ -26,7 +27,8 @@ import animals from "./assets/img/adorable_animals.svg";
 }
 
 function Post(value){
-  const [liked,setLiked] = React.useState(false)
+  const [saved,setSaved] = React.useState(false)
+  const [liked, setLiked] = React.useState(false)
     return(
         <div className ="post">
               <div className ="topo">
@@ -46,12 +48,12 @@ function Post(value){
               <div className ="fundo">
                 <div className ="acoes">
                   <div>
-                    <ion-icon name="heart-outline"></ion-icon>
+                    {liked ? <ion-icon name="heart" onClick={()=> setLiked(false)}  class="red"></ion-icon> : <ion-icon name="heart-outline" onClick={()=> setLiked(true) } class="red"></ion-icon>}
                     <ion-icon name="chatbubble-outline"></ion-icon>
                     <ion-icon name="paper-plane-outline"></ion-icon>
                   </div>
                   <div>
-                    {liked ? <ion-icon name="bookmark" onClick={()=> setLiked(false)}></ion-icon> : <ion-icon name="bookmark-outline" onClick={()=> setLiked(true)}></ion-icon>}
+                    {saved ? <ion-icon name="bookmark" onClick={()=> setSaved(false)}></ion-icon> : <ion-icon name="bookmark-outline" onClick={()=> setSaved(true)}></ion-icon>}
                   </div>
                 </div>
 

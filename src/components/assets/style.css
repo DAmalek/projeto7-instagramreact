@@ -242,6 +242,9 @@
     color: #262626;
   }
   
+  
+  
+  
   .sidebar .sugestoes .titulo {
     display: flex;
     justify-content: space-between;
@@ -391,5 +394,7 @@
       top: 4px;
     }
   }
-  
-  
+ 
+.red {
+  color: crimson;
+}
