@@ -1,15 +1,19 @@
 import { useState } from "react"
 
-export default function(){
-    const [user,setUSer] = useState()
-    const [profile,setProfile] = useState()
+export default function Usuario(){
+    const [user,setUser] = useState("catanacomics");
+    const [profile,setProfile] = useState("assets/img/catanacomics.svg");
     
     return(
         <>
-            <img src="assets/img/catanacomics.svg" />
+            <img src={profile} />
             <div class="texto">
-              <strong>catanacomics</strong>
+              <strong>{user}</strong>
+            
+            <span>
               Catana
+              <ion-icon name="pencil"></ion-icon>
+            </span>
             </div>
         </>
     )

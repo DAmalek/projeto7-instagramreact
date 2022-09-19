@@ -7,7 +7,7 @@ import respondeai from "./assets/img/respondeai.svg"
 import filomoderna from "./assets/img/filomoderna.svg"
 import memeriagourmet from "./assets/img/memeriagourmet.svg"
 
-import style from "./assets/style.css"
+
 
 
 

@@ -32,9 +32,10 @@ function Sugestão(value){
                   <div class="razao">Segue você</div>
                 </div>
           </div>
-      </div>
 
-      <div class="seguir">Seguir</div>
+        <div class="seguir">Seguir</div>
+      </div>
+      
       </>
   )
 }
