@@ -144,7 +144,7 @@
     top: 45px;
     height: 32px;
     width: 32px;
-    color: #FFF;
+    color: rgba(212, 211, 211, 0.822);
     font-size: 28px;
     cursor: pointer;
   }
@@ -391,4 +391,5 @@
       top: 4px;
     }
   }
+  
   

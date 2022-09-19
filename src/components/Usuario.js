@@ -1,18 +1,29 @@
-import { useState } from "react"
+import React from "react"
 
 export default function Usuario(){
-    const [user,setUser] = useState("catanacomics");
-    const [profile,setProfile] = useState("assets/img/catanacomics.svg");
+    const [user,setUser] = React.useState("catanacomics");
+    const [profile,setProfile] = React.useState("assets/img/catanacomics.svg");
     
+    
+
+    function newUser(){
+        const userName = prompt("novo nome de usuario: ")
+        setUser(userName)
+    }
+    function newProfile(){
+        const userPic = prompt("nova foto de perfil (URL):")
+        setProfile(userPic)
+    }
+
     return(
         <>
-            <img src={profile} />
-            <div class="texto">
+            <img onClick={newProfile} src={profile} />
+            <div className="texto">
               <strong>{user}</strong>
             
             <span>
               Catana
-              <ion-icon name="pencil"></ion-icon>
+              <ion-icon name="pencil" onClick={newUser} ></ion-icon>
             </span>
             </div>
         </>
