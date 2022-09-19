@@ -12,13 +12,13 @@ import animals from "./assets/img/adorable_animals.svg";
     
     
     const data = [
-      { user: meowed, content: cat, liked: respondeAi },
-      { user: barked, content: dog, liked: animals }
+      { user: meowed, content: cat, liked: respondeAi, num:101523},
+      { user: barked, content: dog, liked: animals, num:200541 }
     ]
     
     return (
       <div className ="posts">
-            {data.map((value, index)=> <Post user={value.user} content={value.content}liked={value.liked} key={index}  />)}
+            {data.map((value, index)=> <Post user={value.user} content={value.content}liked={value.liked} num={value.num} key={index}  />)}
         </div>
 
 )
@@ -58,7 +58,7 @@ function Post(value){
                 <div className ="curtidas">
                   <img src={value.liked} />
                   <div className ="texto">
-                    Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                    Curtido por <strong>respondeai</strong> e <strong>outras {value.num} pessoas</strong>
                   </div>
                 </div>
               </div>
