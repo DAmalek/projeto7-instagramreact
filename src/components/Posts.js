@@ -14,18 +14,19 @@ import animals from "./assets/img/adorable_animals.svg";
     const data = [
       { user: meowed, content: cat, liked: respondeAi },
       { user: barked, content: dog, liked: animals }
-      ]
-
+    ]
+    
     return (
-        <div className ="posts">
+      <div className ="posts">
             {data.map((value, index)=> <Post user={value.user} content={value.content}liked={value.liked} key={index}  />)}
         </div>
 
-    )
+)
 
 }
 
 function Post(value){
+  const [liked,setLiked] = React.useState(false)
     return(
         <div className ="post">
               <div className ="topo">
@@ -50,7 +51,7 @@ function Post(value){
                     <ion-icon name="paper-plane-outline"></ion-icon>
                   </div>
                   <div>
-                    <ion-icon name="bookmark-outline"></ion-icon>
+                    {liked ? <ion-icon name="bookmark" onClick={()=> setLiked(false)}></ion-icon> : <ion-icon name="bookmark-outline" onClick={()=> setLiked(true)}></ion-icon>}
                   </div>
                 </div>
 
