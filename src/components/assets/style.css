@@ -394,7 +394,9 @@
       top: 4px;
     }
   }
- 
+ ion-icon{
+  visibility: visible;
+ }
 .red {
   color: crimson;
 }
